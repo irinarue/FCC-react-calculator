@@ -1,38 +1,94 @@
-.App {
+html {
+  background: linear-gradient(-45deg,rgb(47, 1, 81), rgb(65, 1, 110), indigo, rgb(146, 37, 224), rgb(193, 114, 250),  rgb(217, 164, 255));
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.CalculatorContainer {
+  margin: 85px auto;
+  border: 5px double rgb(45, 45, 45);
+  border-top-color: lavender;
+  border-left-color: lavender;
+  width: 350px;
+  height: 400px;
+  background: repeating-linear-gradient(
+    -45deg,
+    purple 15%,
+    darkmagenta 25%,
+    darkorchid 32%,
+    blueviolet 38%,
+    darkorchid 44%,
+    darkmagenta 49%,
+    purple 58%);
+  padding: 15px;
+  box-shadow: 5px 5px 13px rgb(45, 45, 55);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.displays {
+  height: 20%;
+  text-align: right;
+  font-family: consolas;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#currentCalcDisplay {
+  background-color: rgb(65, 65, 65);
+  height: 18px;
+  margin-bottom: 5px;
+  padding: 5px 15px;
+  font-size: 85%;
+  color: silver;  
+  box-shadow: 1px 1px 2px silver;
 }
 
-.App-link {
-  color: #61dafb;
+#display {
+  background-color: silver;
+  margin-bottom: 5px;
+  padding: 5px 15px;
+  font-size: 125%;
+  color: rgb(65, 65, 65);
+  box-shadow: -1px -1px 3px rgb(65, 65, 65);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#buttons {
+  height: 80%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+button {
+  font-family: Impact;
+  font-size: 145%;
+  color:rgb(65, 65, 65);
+  text-shadow: 2px 2px 3px lavender;
+
+  border-top: 2px solid lavender;
+  border-left: 2px solid lavender;
+  border-right: 2px solid rgb(65, 65, 65);
+  border-bottom: 2px solid rgb(65, 65, 65);
+  border-radius: 2px;
+  box-shadow: 1px 1px 3px lavender;
+}
+
+#clear {
+  grid-column: 1 / span 2;
+  background-color: hotpink;
+}
+
+#equals {
+  grid-row: 4 / span 2 ;
+  grid-column: 4;
+  background-color: mediumpurple;
+}
+
+#zero {
+  grid-column: 1 / span 2;
+}
+
+.number {
+  background-color: plum;
+}
+
+.calc {
+  background-color: lavender;
 }
